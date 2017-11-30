@@ -43,6 +43,7 @@ public class Run {
         circuito.Componente("NOR1").Entrada(2).setSinalLogico(circuito.Componente("AND2").Saida().getSinalLogico());
         
         //saída – a função recalcula o circuito
+        circuito.Saida(1).setSinalLogico(circuito.Componente("NOR1").Saida().getSinalLogico());
         boolean valor=circuito.Componente("NOR1").Saida().getSinalLogico(); //= circuito.Saida(1).getSinalLogico();
         System.out.println("Resultado do circuito pré-programado: "+ valor);
         
